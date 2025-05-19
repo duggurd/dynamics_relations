@@ -1,0 +1,2 @@
+-e ../d365_relations_cli
+fastmcp>=0.1.0
