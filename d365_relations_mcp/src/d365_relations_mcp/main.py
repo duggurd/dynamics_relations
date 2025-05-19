@@ -4,8 +4,8 @@ MCP server implementation for the Dynamics 365 Table Relationship Finder.
 import argparse
 import sys
 from fastmcp import FastMCP
-from config import DEFAULT_RELATIONSHIP_FILE
-import tools
+from .config import DEFAULT_RELATIONSHIP_FILE
+from .tools import *
 
 def create_server(relationship_file=None):
     """
@@ -20,8 +20,8 @@ def create_server(relationship_file=None):
     
     # If relationship file is provided, update the default
     if relationship_file:
-        import config
-        config.DEFAULT_RELATIONSHIP_FILE = relationship_file
+        from .config import DEFAULT_RELATIONSHIP_FILE
+        DEFAULT_RELATIONSHIP_FILE = relationship_file
     
     # Initialize the MCP server
     mcp = FastMCP(
@@ -30,11 +30,11 @@ def create_server(relationship_file=None):
     )
     
     # Register tools directly from functions
-    mcp.add_tool(tools.find_related_tables)
-    mcp.add_tool(tools.find_relationship_path)
-    mcp.add_tool(tools.get_relationship_details)
-    mcp.add_tool(tools.list_tables)
-    mcp.add_tool(tools.get_stats)
+    mcp.add_tool(find_related_tables)
+    mcp.add_tool(find_relationship_path)
+    mcp.add_tool(get_relationship_details)
+    mcp.add_tool(list_tables)
+    mcp.add_tool(get_stats)
     # mcp.add_tool(tools.optimize_relationship_file)
     
     return mcp

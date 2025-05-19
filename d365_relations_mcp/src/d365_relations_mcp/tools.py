@@ -2,8 +2,8 @@
 MCP tools for the Dynamics 365 Table Relationship Finder.
 """
 from fastmcp import FastMCP
-from config import DEFAULT_RELATIONSHIP_FILE
-from  cli import AdvancedTableRelationshipFinder
+from .config import DEFAULT_RELATIONSHIP_FILE
+from d365_relations_cli import AdvancedTableRelationshipFinder
     
 
 def find_related_tables(table: str, relationship_file: str = None) -> dict:

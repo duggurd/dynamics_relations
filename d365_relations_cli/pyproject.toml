@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "d365-relations-cli"
-version = "0.1.2"
+version = "0.1.3"
 description = "Get and explore relationships between Dynamics 365 tables"
 license-files = ["LICENSE"]
 keywords = ["dynamics 365", "relations", "relationships", "axapta", "d365", "data", "cli"]
