@@ -3,6 +3,8 @@ import json
 import os
 from collections import defaultdict, deque
 import time
+import importlib.resources
+import importlib.util
 
 class AdvancedTableRelationshipFinder:
     """
@@ -33,11 +35,7 @@ class AdvancedTableRelationshipFinder:
         """
         start_time = time.time()
         print(f"Loading relationships from {self.json_file_path}...")
-        
-        if not os.path.exists(self.json_file_path):
-            raise FileNotFoundError(f"The file {self.json_file_path} was not found.")
-        
-        with open(self.json_file_path, 'r') as file:
+        with importlib.resources.files('d365_relations_cli').joinpath(self.json_file_path).open('r') as file:
             data = json.load(file)
         
         # Check if this is an advanced optimized file
