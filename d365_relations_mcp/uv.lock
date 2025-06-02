@@ -57,11 +57,11 @@ wheels = [
 
 [[package]]
 name = "d365-relations-cli"
-version = "0.1.3"
+version = "0.1.4"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/60/f3/e22d3cf9acd186308531869b7c54409f3e934f0081bbcbdb8f752aff39bf/d365_relations_cli-0.1.3.tar.gz", hash = "sha256:e52b54435c73eb57e6e95add6c56592afccb944959249645d1a74443f4b7a1a7", size = 10253 }
+sdist = { url = "https://files.pythonhosted.org/packages/cd/7e/8196a14b29dbc615a2a71186f64f06673d0716434376deafcf2a585d6b0e/d365_relations_cli-0.1.4.tar.gz", hash = "sha256:238dea2bad34be377c8b32d00a3e8393844f71651b1cbea9679daa3ace185f65", size = 217440 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4f/b9/56d27b8ba0959bbe428097ce28adee91dc0f3dd56a96526bddc43726898f/d365_relations_cli-0.1.3-py3-none-any.whl", hash = "sha256:cddf6adfcfe79306838ec038f128eca967c929adf58634bfdfa17859e889e516", size = 11353 },
+    { url = "https://files.pythonhosted.org/packages/b4/d2/98cc2d4a45224bb2618c4c117a27527b9409b2a6a1ff14a77b7252e2f70b/d365_relations_cli-0.1.4-py3-none-any.whl", hash = "sha256:154d8e5c053dd8ac4e666b1be58b4b8da3a4cbd69b5bbf6aefeabc2983eee941", size = 219657 },
 ]
 
 [[package]]
@@ -75,7 +75,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "d365-relations-cli", specifier = ">=0.1.3" },
+    { name = "d365-relations-cli", specifier = ">=0.1.4" },
     { name = "fastmcp", specifier = ">=0.1.0" },
 ]
 
